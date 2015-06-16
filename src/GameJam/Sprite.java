@@ -10,7 +10,7 @@ public class Sprite {
 		this.image = img;
 	}
 	
-	public int getWidth() {
+	public int getWidth() {bn d
 		return image.getWidth(null);
 	}
 	
