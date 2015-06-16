@@ -1,14 +1,12 @@
 package niveaux;
 
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import java.io.File;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
-import utils.*;
+import utils.Constante;
+import utils.Images;
+import Items.Detritus;
 /**
  * premier niveau
  * 
@@ -26,24 +24,14 @@ public class Niveau1 {
 		fenetre = new JFrame("Gamejam");
 		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		fenetre.setPreferredSize(new Dimension(Constante.ECRANX, Constante.ECRANY));
-		fenetre.setLayout(null);
-		/*
-		JPanel decor = new JPanel();
-		decor.setBackground(Color.ORANGE);
-		decor.setBounds(0,0, Constante.ECRANX, Constante.ECRANY);
-		decor.repaint();
+		
+		//fenetre.setLayout(null); connard
 		
 		
-		fenetre.add(decor);*/
-		
-		JCompPerso compperso = new JCompPerso(0, new ImageIcon("img/lvl1/rouge.jpg").getImage());
-		compperso.repaint();
-		
-		fenetre.add(compperso);
-		
-		
-		
-		
+		Detritus d1 = new Detritus(false, 50, 50);
+		System.out.println(Images.BLEU.getDescription());
+		fenetre.getContentPane().add(d1);
+				
 		fenetre.setResizable(false);
 		fenetre.pack();
 		fenetre.setVisible(true);	
