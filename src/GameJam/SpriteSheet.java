@@ -2,6 +2,8 @@ package GameJam;
 
 import java.util.HashMap;
 
+import sprite.Sprite;
+
 public class SpriteSheet {
 	private static SpriteSheet spriteS = new SpriteSheet() ;
 	private HashMap sprite ;
