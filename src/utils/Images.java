@@ -11,6 +11,7 @@ public class Images {
 		return new ImageIcon(url);
 	}
 	public static final ImageIcon BLEU = getImg("/img/lvl1/bleu.jpg");
+	public static final ImageIcon VERT = getImg("/img/lvl1/vert.jpg");
 	
 	
 }

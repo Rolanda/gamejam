@@ -27,50 +27,13 @@ public class Niveau1 {
 		fenetre.setPreferredSize(new Dimension(Constante.ECRANX, Constante.ECRANY));
 		//fenetre.setLayout(null); // conard c toi la merde
 		
-		Detritus d1 = new Detritus(true, 150, 150);
+		Detritus d1 = new Detritus(true, 150, 150, 50, 50);
 		d1.repaint();
 		fenetre.getContentPane().add(d1);
 		
-		d1.addMouseListener(new MouseListener() {
-			
-			@Override
-			public void mouseReleased(MouseEvent arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseClicked(MouseEvent e) 
-			{
-				if(e.getSource() instanceof Detritus){
-					Detritus d = (Detritus)e.getSource();
-					// TODO Auto-generated method stub
-					if(d.isAccesible())
-						d.setVisible(false);
-					else
-						System.out.println("lol");
-				}
-				
-			}
-		});
+//		Detritus d2 = new Detritus(true, 500, 500);
+//		d2.repaint();
+//		fenetre.getContentPane().add(d2);
 		
 		fenetre.setResizable(false);
 		fenetre.pack();
