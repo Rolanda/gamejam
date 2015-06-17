@@ -1,17 +1,18 @@
 package utils;
 
-
-import java.awt.Image;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+
+import Items.Item;
 
 
-public class Constante {
+
+
+public class Constante 
+{
 	public static final int ECRANX = (int)java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth();
 	public static final int ECRANY= (int)java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight();
-
 	
-	public static Map<Integer, List<Image>> stackImg = new HashMap<Integer, List<Image>>();
+	public static List<Item> inventaire = new ArrayList<Item>();
 	
 }

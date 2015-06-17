@@ -1,55 +1,47 @@
 package niveaux;
 
 import java.awt.Dimension;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-
 import javax.swing.JFrame;
-
 import utils.Constante;
-import Items.Detritus;
-/**
- * premier niveau
- * 
- * pour le mioment affiche qu'un fenetre
- * @author Nordic Binary
- *
- */
-public class Niveau1 {
+import utils.Images;
+import Items.Item;
+import Items.Ramasable;
+public class Niveau1 
+{
 	private JFrame fenetre;
 	
-	/**
-	 * Constructeur
-	 */
-	Niveau1(){
+	Niveau1()
+	{
 		fenetre = new JFrame("Gamejam");
 		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		fenetre.setPreferredSize(new Dimension(Constante.ECRANX, Constante.ECRANY));
-		//fenetre.setLayout(null); // conard c toi la merde
+		fenetre.setLayout(null);
 		
-		Detritus d1 = new Detritus(true, 150, 150, 50, 50);
-		d1.repaint();
-		fenetre.getContentPane().add(d1);
+		Item it1 = new Ramasable("item1",Images.BLEU, 150, 150,50,50);
+		fenetre.getContentPane().add(it1);
 		
-//		Detritus d2 = new Detritus(true, 500, 500);
-//		d2.repaint();
-//		fenetre.getContentPane().add(d2);
+		
+		Item it2 = new Ramasable("item2",Images.VERT, 170, 170,50,50);
+		fenetre.getContentPane().add(it2);
+		
+		Item it3 = new Ramasable("item3",Images.ROUGE, 180, 150,50,50);
+		fenetre.getContentPane().add(it3);
+		
 		
 		fenetre.setResizable(false);
 		fenetre.pack();
 		fenetre.setVisible(true);
+		
 	}
 	
-	/**
-	 * petite "main" de test
-	 * @param arg
-	 */
-	public static void main(String[] arg){
-		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+	public static void main(String[] arg)
+	{
+		javax.swing.SwingUtilities.invokeLater(new Runnable() 
+		{
 			
 			@Override
-			public void run() {
-				// TODO Auto-generated method stub
+			public void run() 
+			{
 				new Niveau1();
 			}
 		});
