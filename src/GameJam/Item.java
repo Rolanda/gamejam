@@ -13,19 +13,21 @@ public class Item extends Entity {
 	// Image associé
 	protected Sprite sprite;
 
-	// Objet interactif
+	// Item interactif
 	protected boolean interact = true;
 
-	// Référence de l'objet
+	// Référence de l'item
 	private String ref;
 
 	// Texte associé à l'item
 	private String txt;
 
+	//Constructeur de base, donne un nom à un item
 	public Item(String ref) {
 		this.ref = ref;
 	}
 
+	//Associe une description à un item
 	public void setDescription(String ref) {
 		Field f;
 		try {
@@ -37,12 +39,25 @@ public class Item extends Entity {
 		}
 	}
 
+	//Retourne la coordonnée x
 	public int getX() {
 		return x;
 	}
 
+	//Retourne la coordonnée y
 	public int getY() {
 		return y;
+	}
+	
+	//Dessine le sprite associé à l'item
+	public void draw(Graphics g) {
+		sprite.draw(g,x, y);
+	}
+	
+	public void move(int dx, int dy) {		
+	}
+
+	public void setInteractive() {
 	}
 	
 	public static void main(String[] args) {
@@ -51,21 +66,5 @@ public class Item extends Entity {
 		System.out.println(test.txt);
 	}
 
-	@Override
-	public void move(int dx, int dy) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void setInteractive() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void draw(Graphics g) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }
